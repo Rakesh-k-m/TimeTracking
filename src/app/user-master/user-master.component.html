@@ -1,0 +1,38 @@
+
+  <nav class="navbar"> 
+        <div>
+          <h1 style="align-items: center;">Time Tracking of an Employees &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pie Chart</h1>
+            </div>
+  </nav>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+       <!-- <th>Sr No.</th>  -->
+      <th>Name</th>
+      <!-- <th>Login</th>
+      <th>Logout</th> -->
+      <th>Total Worked Time</th>
+      <!-- <th>Entry</th>
+      <th>Deleted</th> -->
+      <th>Percentage of TT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userDataSource;">
+      <!-- <td>{{user}}</td> -->
+      <td>{{user.EmployeeName}}</td>
+      <!-- <td>{{user.StarTimeUtc}}</td>
+      <td>{{user.EndTimeUtc}}</td> -->
+      <td>{{user.TotalTime}} hours</td> 
+      <td>{{ percentageDiff()}} %</td>
+     <!-- <td>{{user.EntryNotes}}</td>
+      <td>{{user.DeletedOn}}</td>  -->
+    </tr>
+  </tbody>
+</table>
+
+<div class="div">
+  <canvas id="myChart"></canvas>
+</div>
